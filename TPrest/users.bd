@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <users>
+        <entry>
+            <key>yang@gmail.com</key>
+            <value>
+                <name>Yang</name>
+                <emailAdress>yang@gmail.com</emailAdress>
+            </value>
+        </entry>
+        <entry>
+            <key>victor@gmail.com</key>
+            <value>
+                <name>Victor</name>
+                <emailAdress>victor@gmail.com</emailAdress>
+            </value>
+        </entry>
+        <entry>
+            <key>erwan@gmail.com</key>
+            <value>
+                <name>Erwan</name>
+                <emailAdress>erwan@gmail.com</emailAdress>
+            </value>
+        </entry>
+    </users>
+</users>

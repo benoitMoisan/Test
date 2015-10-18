@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project name="TPrest" default="all" basedir=".">
+	
+	<property name="bin" value="bin" />
+	<property name="src" value="src" />
+	
+  <target name="all">
+    <antcall target="clean"/>
+  	<antcall target="build"/>
+  	<antcall target="execute"/>
+  </target>
+
+	<target name="init">
+		
+		<mkdir dir="${bin}"/>
+		
+		<path id="javac.classpath">
+			<fileset dir="jars" includes="*.jar" />
+		</path>
+		
+	</target>
+	
+	<target name="build" description="build all the java classes">
+		<javac  classpathref="javac.classpath"
+				srcdir="${src}"
+				destdir="${bin}"
+				includes="tprest/*.java" />
+	</target>
+	
+	<target name="execute" description="execute">
+		<java fork="true" classpath="jars/*:${bin}" classname="tprest.Publisher" >
+		</java>
+	</target>
+	
+	<target name="client">
+		<java fork="true" classpath="jars/*:${bin}" classname="tprest.JavaClient" >
+		</java>
+	</target>
+				
+	<target name="clean" description="clean">
+		<delete dir="${bin}" />
+	</target>
+		
+	
+</project>
